@@ -3,6 +3,9 @@ import cookieParser from "cookie-parser";
 import config from "./utils/config.js";
 import connectDB from "./connections/index.js";
 
+import TweetService from "./services/tweet-service.js";
+
+
 
 const app = express();
 
@@ -15,4 +18,6 @@ app.use(cookieParser());
 
 const PORT = config.port;
 
-app.listen(PORT, () => { console.log(`Server is running in the port ${PORT}`)});
+app.listen(PORT,async () => { 
+    console.log(`Server is running in the port ${PORT}`)
+});

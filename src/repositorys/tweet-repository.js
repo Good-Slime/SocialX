@@ -1,11 +1,10 @@
-import Tweet from "../models/tweet";
-import tweet from "./tweet.js";
+import Tweet from "../models/tweet.js";
 
 class TweetRepository{
     async create(data){
         try {
-            const Tweet = await tweet.create(data);
-            return Tweet;
+            const tweet = await Tweet.create(data);
+            return tweet;
         } catch (error) {
             console.log(error);
         }

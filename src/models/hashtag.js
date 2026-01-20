@@ -14,3 +14,7 @@ const hashtagschma = new mongoose.Schema({
     ]
 
 },{timestamps: true})
+
+const Hashtag = mongoose.model('Hashtag', hashtagschma);
+
+export default Hashtag;
