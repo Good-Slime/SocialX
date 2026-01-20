@@ -1,0 +1,16 @@
+import mongoose from "mongoose";
+
+const hashtagschma = new mongoose.Schema({
+    title:{
+        type: String,
+        required: true,
+    
+    },
+    tweets: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Tweet'
+        }
+    ]
+
+},{timestamps: true})
