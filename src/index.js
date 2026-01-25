@@ -23,17 +23,17 @@ const PORT = config.port;
 app.listen(PORT,async () => { 
     console.log(`Server is running in the port ${PORT}`)
 
-    const userRepo = new UserRepository();
-    const tweetRepo = new TweetRepository();
-    const tweets = await tweetRepo.getAll(0,10)
-    console.log(tweets);
-    const user = await userRepo.create({
-        email:"rkr15@gmail.com",
-        password:"123456",
-        name:"nkr"
-    })
-    // console.log(user.id)
+    // const userRepo = new UserRepository();
+    // const tweetRepo = new TweetRepository();
+    // const tweets = await tweetRepo.getAll(0,10)
+    // console.log(tweets);
+    // const user = await userRepo.create({
+    //     email:"rkr15@gmail.com",
+    //     password:"123456",
+    //     name:"nkr"
+    // })
+    // // console.log(user.id)
     
-    const likeService = new LikeService();
-    await likeService.toggleLike(tweets[0].id,'Tweet', user.id);
+    // const likeService = new LikeService();
+    // await likeService.toggleLike(tweets[0].id,'Tweet', user.id);
 });
