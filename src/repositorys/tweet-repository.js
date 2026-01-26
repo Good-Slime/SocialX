@@ -11,6 +11,8 @@ class TweetRepository extends CrudRepository {
             const tweet = await Tweet.create(data);
             return tweet;
         } catch (error) {
+            console.log("Something went wrong in crud repo");
+            console.log(error);
             throw error;
         }
     }

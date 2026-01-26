@@ -4,7 +4,12 @@ const tweetservice= new TweetService();
 
 export const createTweet = async (req,res)=>{
     try {
-        const response = await tweetservice.create(req.body);
+        console.log("incrate tweet")
+        console.log(req.user)
+        const response = await tweetservice.create({
+            content: req.body.content,
+            userId: req.user._id
+        });
         return res.status(201).json({
             success: true,
             message : 'Tweet created successfully',
@@ -14,7 +19,7 @@ export const createTweet = async (req,res)=>{
     } catch (error) {
         return res.status(500).json({
             success: false,
-            message : 'Something Went Wrong',
+            message : 'Something Went Wrong in tweet controller',
             data : {},
             error : error
         })
