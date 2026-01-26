@@ -13,11 +13,11 @@ const router = express.Router();
 router.post("/signup",signup);
 router.post("/login",login);
 
-router.post("/tweets", authenticate, createTweet);
+router.post("/tweets", authenticate, reateTweet);
 router.get("/tweets/:id", getTweet)
 
 router.post("/likes/toggle",ToggleLike);
 
-router.post("/comments",createComment);
+router.post("/comments",authenticate,createComment);
 
 export default router;
