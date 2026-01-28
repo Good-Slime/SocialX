@@ -23,6 +23,6 @@ app.use("/api", apiRoutes);
 
 const PORT = config.port;
 
-app.listen(PORT,async () => { 
-    console.log(`Server is running in the port ${PORT}`)
+app.listen(PORT, async () => {
+    console.log(`Server is running in the port ${PORT}`);
 });
