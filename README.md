@@ -41,8 +41,9 @@ This project exists to demonstrate backend engineering concepts — not UI.
 
 ## Project Structure
 
+```
 src/
-├── config/ # Database and environment configuration
+├── connections/ # Database connections
 ├── controllers/ # HTTP request/response handling
 ├── middlewares/ # Authentication and custom middleware
 ├── models/ # Mongoose schemas
@@ -50,6 +51,7 @@ src/
 ├── services/ # Business logic
 ├── utils/ # Helper utilities
 └── index.js # Application entry point
+```
 
 
 Controllers do not contain business logic.  
@@ -76,16 +78,18 @@ JWT_SECRET=your_jwt_secret
 git clone https://github.com/Good-Slime/SocialX.git
 cd SocialX
 npm install
---Run the Application
+```
+ ## Run the Application
+```
 npm start
 ```
 
 ## Authentication
 
 Send the JWT in request headers:
-
+```
 Authorization: Bearer <JWT_TOKEN>
-
+```
 
 Requests without a valid token are rejected.
 
