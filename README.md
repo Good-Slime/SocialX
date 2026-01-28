@@ -97,4 +97,4 @@ Requests without a valid token are rejected.
 
 ## License
 
-MIT
+ISC
